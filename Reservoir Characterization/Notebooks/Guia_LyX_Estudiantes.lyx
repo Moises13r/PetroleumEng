@@ -1,0 +1,997 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Guía de Lyx para estudiantes"
+\pdf_author "Curso Introductorio"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black,citecolor=black,urlcolor=black"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Guía de Lyx para estudiantes
+\end_layout
+
+\begin_layout Author
+Josué Heber Fabián Martínez y Moisés Velasco Lozano
+\end_layout
+
+\begin_layout Date
+
+\emph on
+Material de apoyo - Geociencias / Ingeniería Petrolera
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+Agosto de 2026
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/lyx_logo.png
+	width 3.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+¿Qué es LyX?
+\end_layout
+
+\begin_layout Standard
+LyX es un procesador de documentos de tipo 
+\series bold
+WYSIWYM
+\series default
+ (
+\emph on
+What You See Is What You Mean
+\emph default
+), no un simple editor de texto tipo Word.
+ En lugar de preocuparte por el formato visual (tamaños de letra, saltos
+ de página, numeración manual), tú te enfocas en la 
+\series bold
+estructura
+\series default
+ del documento (secciones, ecuaciones, tablas, referencias) y LyX —a través
+ de LaTeX por debajo— se encarga de la tipografía.
+\end_layout
+
+\begin_layout Subsection
+¿Por qué es útil para un ingeniero petrolero?
+\end_layout
+
+\begin_layout Itemize
+Numeración automática de ecuaciones, tablas y figuras.
+\end_layout
+
+\begin_layout Itemize
+Excelente manejo de fórmulas matemáticas complejas (balances de materia,
+ ecuaciones de flujo, PVT, etc.).
+\end_layout
+
+\begin_layout Itemize
+Referencias cruzadas y bibliografía automáticas (ideal para reportes técnicos,
+ tesis y artículos).
+\end_layout
+
+\begin_layout Itemize
+Salida en PDF de calidad tipográfica profesional, consistente en cualquier
+ computadora.
+\end_layout
+
+\begin_layout Itemize
+Es software libre y gratuito.
+\end_layout
+
+\begin_layout Section
+Instalación
+\end_layout
+
+\begin_layout Standard
+LyX necesita una distribución de LaTeX instalada en el sistema:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Windows
+\series default
+: instalar MiKTeX y luego LyX (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.lyx.org/Download
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+macOS
+\series default
+: instalar MacTeX y luego LyX.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Linux
+\series default
+: 
+\family typewriter
+sudo apt install lyx texlive-full
+\family default
+ (Debian/Ubuntu).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/instalacion_sistemas.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+La interfaz básica
+\end_layout
+
+\begin_layout Standard
+Al abrir LyX se identifican tres zonas principales:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Barra de herramientas superior
+\series default
+: acceso rápido a estilos de párrafo, negritas, cursivas, inserción de
+ fórmulas, tablas, etc.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Área de edición
+\series default
+: donde se escribe el documento.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Panel de esquema (Outline)
+\series default
+: menú 
+\emph on
+Ver > Esquema
+\emph default
+, muestra la estructura de secciones, útil para navegar documentos largos
+ como un reporte de yacimiento.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/barra_herramientas.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Funciones básicas
+\end_layout
+
+\begin_layout Subsection
+Crear y guardar un documento
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Archivo > Nuevo
+\emph default
+, elegir la clase de documento (
+\family typewriter
+article
+\family default
+ es una buena clase por defecto para reportes cortos).
+ Guardar con 
+\emph on
+Archivo > Guardar
+\emph default
+ genera un archivo 
+\family typewriter
+.lyx
+\family default
+, que es el formato nativo editable (no un PDF).
+\end_layout
+
+\begin_layout Subsection
+Estilos de párrafo
+\end_layout
+
+\begin_layout Standard
+El menú desplegable de la izquierda en la barra de herramientas controla
+ el 
+\series bold
+estilo del párrafo actual
+\series default
+.
+ Los más usados:
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Standard
+\family default
+: texto normal.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Section
+\family default
+ / 
+\family typewriter
+Subsection
+\family default
+ / 
+\family typewriter
+Subsubsection
+\family default
+: títulos jerárquicos (se numeran solos).
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Itemize
+\family default
+: listas con viñetas.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Enumerate
+\family default
+: listas numeradas.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Description
+\family default
+: listas de términos y definiciones.
+\end_layout
+
+\begin_layout Subsection
+Insertar fórmulas matemáticas
+\end_layout
+
+\begin_layout Standard
+Con el atajo 
+\family typewriter
+Ctrl+M
+\family default
+ (o 
+\emph on
+Insertar > Fórmula
+\emph default
+) se abre un editor de ecuaciones en línea.
+ Para una ecuación centrada y numerada se usa 
+\emph on
+Insertar > Fórmula > Fórmula visualizada
+\emph default
+.
+ Ejemplo (Ley de Darcy):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+q = -\frac{k A}{\mu} \frac{dP}{dx}
+\label{eq:darcy}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $q$
+\end_inset
+
+ es el caudal, 
+\begin_inset Formula $k$
+\end_inset
+
+ la permeabilidad, 
+\begin_inset Formula $A$
+\end_inset
+
+ el área transversal, 
+\begin_inset Formula $\mu$
+\end_inset
+
+ la viscosidad del fluido y 
+\begin_inset Formula $dP/dx$
+\end_inset
+
+ el gradiente de presión.
+ La ecuación se referencia automáticamente escribiendo 
+\emph on
+Insertar > Referencia cruzada
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Insertar tablas
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Insertar > Tabla
+\emph default
+, se elige el número de filas y columnas con el mouse.
+ Ejemplo de tabla de propiedades de un yacimiento:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Propiedad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Símbolo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Porosidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.18
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Permeabilidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+120 mD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Presión inicial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3200 psi
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Saturación de agua
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{w}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Insertar figuras
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Insertar > Archivo > Imagen
+\emph default
+, permite importar PNG, JPG o PDF vectorial (recomendado para gráficas
+ generadas en Excel, MATLAB o Python, ya que se ven nítidas al imprimir).
+\end_layout
+
+\begin_layout Subsection
+Referencias cruzadas y bibliografía
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Referencias cruzadas
+\series default
+: 
+\emph on
+Insertar > Referencia cruzada
+\emph default
+, apunta a una etiqueta (
+\family typewriter
+label
+\family default
+) puesta en una ecuación, tabla, figura o sección.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Bibliografía
+\series default
+: LyX se integra con BibTeX.
+ Se importa un archivo 
+\family typewriter
+.bib
+\family default
+ desde 
+\emph on
+Insertar > Lista y Tabla de Contenidos > BibTeX Bibliography
+\emph default
+, y se citan referencias con 
+\emph on
+Insertar > Cita
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Exportar a PDF
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Archivo > Exportar > PDF (pdflatex)
+\emph default
+, o el botón con el ícono de PDF en la barra de herramientas.
+ LyX compila el documento en segundo plano usando LaTeX.
+\end_layout
+
+\begin_layout Section
+Ejemplo aplicado: balance de materia
+\end_layout
+
+\begin_layout Standard
+Otra fórmula común en la industria, la ecuación de gases reales:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+PV = znRT
+\label{eq:gas-real}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $z$
+\end_inset
+
+ es el factor de compresibilidad del gas.
+ Este tipo de ecuación se escribe en LyX igual que la anterior: con el
+ editor de fórmulas (
+\family typewriter
+Ctrl+M
+\family default
+), escribiendo el código como en LaTeX (por ejemplo 
+\family typewriter
+P V = z n R T
+\family default
+) y LyX lo renderiza en tiempo real.
+\end_layout
+
+\begin_layout Section
+Atajos de teclado esenciales
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Atajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Acción
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Ctrl+M
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Insertar fórmula en línea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Ctrl+Enter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nueva línea sin nuevo párrafo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Ctrl+R
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exportar/ver PDF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Ctrl+Shift+P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vista previa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Ctrl+B / Ctrl+I
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Negrita / Cursiva
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Alt+P
+\family default
+ seguido de un número
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cambiar estilo de párrafo rápido
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio práctico para la clase
+\end_layout
+
+\begin_layout Enumerate
+Crear un documento nuevo tipo 
+\family typewriter
+article
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Escribir un título: «Reporte de Pruebas de Presión — Pozo X-1».
+\end_layout
+
+\begin_layout Enumerate
+Agregar dos secciones: 
+\emph on
+Introducción
+\emph default
+ y 
+\emph on
+Resultados
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+En 
+\emph on
+Resultados
+\emph default
+, insertar la ecuación de Darcy y una tabla con al menos 3 propiedades
+ del pozo.
+\end_layout
+
+\begin_layout Enumerate
+Exportar el documento a PDF.
+\end_layout
+
+\begin_layout Section
+Recursos adicionales
+\end_layout
+
+\begin_layout Itemize
+Sitio oficial: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.lyx.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Manual de introducción incluido en LyX: 
+\emph on
+Ayuda > Introducción
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Foro de la comunidad hispana: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://forum.lyx.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
