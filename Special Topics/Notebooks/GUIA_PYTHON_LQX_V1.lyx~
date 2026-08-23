@@ -1,0 +1,1347 @@
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr} % activamos el paquete
+\pagestyle{fancy} % seleccionamos un estilo
+\lhead{} % texto izquierda de la cabecera
+\chead{} % texto centro de la cabecera
+\rhead{} % número de página a la derecha
+\rfoot{}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language spanish-mexico
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification default
+\crossref_package refstyle
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\docbook_mathml_version 0
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Guía de Python para estudiantes
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Material de apoyo - Geociencias / Ingeniería Petrolera
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Moisés Velasco Lozano
+\end_layout
+
+\begin_layout Standard
+\align center
+Ximena Lagunes Quijada
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+rhead{Temas Selectos de Ingeniería Petrolera}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lhead{UNAM}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+rfoot{Notas de clase,
+ Velasco-Lozano}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta guía está diseñada como material introductorio para la instalacion de Anaconda y comprender Python.
+ A lo largo del documento se presentan conceptos,
+ sintaxis y ejemplos prácticos que permiten comprender progresivamente el funcionamiento del lenguaje y su aplicación en el análisis de datos.
+ Los ejemplos pueden ser modificados y ejecutados por el estudiante para reforzar los conocimientos adquiridos.
+\end_layout
+
+\begin_layout Section
+Descargar e instalar Anaconda
+\end_layout
+
+\begin_layout Standard
+Anaconda Distribution es una distribución de Python que facilita la instalación y comprender el entorno de Python.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+1.
+ Acceder a la página oficial de Anaconda
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GP_1.png
+	lyxscale 50
+	darkModeSensitive
+	scale 40
+	rotateOrigin centerTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para la instalación de Anaconda 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+2.
+ Crear una cuenta o iniciar sesión
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.anaconda.com/products/navigator"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment center
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GP_2.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para la instalación de Anaconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Seleccionar el instalador gráfico para Windows de 64 bits en la sección de distribución de Anaconda.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_3.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para la instalación de Anaconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ Localizar el instalador en la carpeta de Descargas y hacer doble clic sobre el archivo para ejecutarlo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_4.png
+	lyxscale 60
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para la instalación de Anaconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+ Seleccionar una opción de instalación:
+\end_layout
+
+\begin_layout Itemize
+Solo yo (Recomendado):
+ Instale la distribución Anaconda para la cuenta de usuario actual.
+\end_layout
+
+\begin_layout Itemize
+Todos los usuarios:
+ Instale Anaconda Distribution para todas las cuentas de usuario del equipo (requiere privilegios de administrador de Windows).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+ Seleccionar una carpeta de destino para instalar Anaconda y,
+ a continuación,
+ seleccionar Siguiente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.
+ En la ventana 
+\series bold
+Advanced Installation Options
+\series default
+ se muestran algunas opciones para configurar Anaconda antes de iniciar la instalación.
+ Mantenga seleccionada la opción 
+\series bold
+Create shortcuts
+\series default
+,
+ ya que permite crear accesos directos para facilitar el acceso a Anaconda y 
+\series bold
+Register Anaconda3 as the system Python 3.12
+\series default
+ para establecer la versión de Python incluida en Anaconda como la principal del sistema y facilitar su reconocimiento por programas como VS Code o PyCharm.
+ La opción 
+\series bold
+Clear the package cache upon completion
+\series default
+ puede dejarse desmarcada.
+ Esta opción únicamente elimina archivos temporales al finalizar la instalación para liberar espacio en el disco.
+ Después de configurar las opciones,
+ haga clic en 
+\series bold
+Install
+\series default
+ para comenzar la instalación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+8.
+ Seleccionar Siguiente dos veces y,
+ a continuación,
+ seleccionar Finalizar para cerrar el instalador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+9.
+ Buscar Anaconda 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_5.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para la instalación de Anaconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+10.
+ Instalar:
+\end_layout
+
+\begin_layout Itemize
+anaconda_powershell_prompt
+\end_layout
+
+\begin_layout Itemize
+anaconda_prompt
+\end_layout
+
+\begin_layout Itemize
+JupyterLab
+\end_layout
+
+\begin_layout Itemize
+Notebook
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_6.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para la instalación de Anaconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Crear un Entorno 
+\end_layout
+
+\begin_layout Standard
+Los entornos en conda son espacios aislados y autónomos donde se pueden instalar versiones específicas de software.
+ Esto incluye dependencias,
+ bibliotecas y versiones de Python.
+ Este aislamiento ayuda a evitar conflictos entre versiones de paquetes y garantiza que tus proyectos cuenten con las bibliotecas y herramientas exactas que necesitan.
+\end_layout
+
+\begin_layout Standard
+1.
+ Ingresar a la sección 
+\series bold
+Environments
+\series default
+ y hacer clic en el botón 
+\series bold
+Create
+\series default
+ para crear un nuevo entorno.
+ Escribir el nombre del entorno sin utilizar espacios y,
+ posteriormente,
+ hacer clic en 
+\series bold
+Create
+\series default
+ para iniciar su creación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_7.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para la creación de un entorno en Anaconda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Jupyter Notebook
+\end_layout
+
+\begin_layout Subsection
+¿Qué es Jupyter Notebook?
+\end_layout
+
+\begin_layout Standard
+\align block
+Jupyter Notebook es una herramienta interactiva que permite escribir,
+ ejecutar y documentar código de Python dentro de un mismo archivo.
+ Su estructura se basa en celdas,
+ las cuales pueden utilizarse para ejecutar código o agregar texto explicativo mediante Markdown.
+ 
+\end_layout
+
+\begin_layout Standard
+\align block
+Esta combinación permite integrar código,
+ resultados,
+ ecuaciones,
+ gráficas e imágenes en un solo documento,
+ facilitando el análisis de datos,
+ la realización de cálculos y la documentación de procedimientos.
+ Por esta razón,
+ Jupyter Notebook es ampliamente utilizado en áreas científicas,
+ académicas y de ingeniería.
+\end_layout
+
+\begin_layout Standard
+\align block
+\begin_inset CommandInset href
+LatexCommand href
+target "https://jupyter.org/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Abrir Jupyter Notebook
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ Abrir Anaconda Prompt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_8.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para abrir Jupyter Notebook
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Activar tu entorno conda con :
+ 
+\series bold
+conda activate nombre_de_tu_entorno
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_9.png
+	lyxscale 60
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para abrir Jupyter Notebook
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Abrir Jupyter Notebook escribiendo el comando 
+\series bold
+jupyter notebook
+\series default
+ y presionar la tecla 
+\series bold
+Enter
+\series default
+ para ejecutarlo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_10.png
+	lyxscale 60
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para abrir Jupyter Notebook
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_11.png
+	lyxscale 60
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para abrir Jupyter Notebook
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Crea el archivo
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Hacer clic en el botón 
+\series bold
+New
+\series default
+,
+ ubicado en la esquina superior derecha.
+\end_layout
+
+\begin_layout Enumerate
+En el menú desplegable,
+ seleccionar Python asociado al entorno creado previamente.
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_12.png
+	lyxscale 80
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para abrir Jupyter Notebook
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\align left
+Asignar un nombre al Notebook haciendo clic en la palabra
+\series bold
+ Untitled
+\series default
+,
+ ubicada en la parte superior izquierda de la pantalla.
+ Escribir el nombre deseado para el archivo y,
+ posteriormente,
+ hacer clic en 
+\series bold
+Rename 
+\series default
+para guardar el nuevo nombre.
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_13.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para abrir Jupyter Notebook
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Comenzar a programar escribiendo las instrucciones de Python en una celda de código del Notebook.
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_14.png
+	lyxscale 60
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo para abrir Jupyter Notebook
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Interfaz de Jupyter Notebook
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GPT_1.png
+	lyxscale 30
+	scale 31
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo de la interfaz de Jupyter Notebook 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tu primer Codigo
+\end_layout
+
+\begin_layout Enumerate
+Seleccionar una celda de código haciendo clic sobre ella.
+\end_layout
+
+\begin_layout Enumerate
+Escribir el siguiente código en la celda seleccionada:
+ 
+\series bold
+print("Hola mundo")
+\end_layout
+
+\begin_layout Enumerate
+Ejecutar el código haciendo clic en el botón 
+\series bold
+Run
+\series default
+ de la barra de herramientas,
+ identificado por un ícono en forma de triángulo apuntando hacia la derecha.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename GP_15.png
+	lyxscale 30
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ilustrativo de tu primer codigo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
