@@ -1,4 +1,4 @@
-Sample,Area,Thickness h (ft),Porosity,Oil Saturation So,Oil FVF Bo (rb/STB),N (MMSTB),Grouped Feature
+Sample,Area (acres),Thickness h (ft),Porosity,Oil Saturation So,Oil FVF Bo (rb/STB),N (MMSTB),Grouped Feature
 1,1051.9,10.8,0.141,0.539,1.418,4.724,608.88
 2,1108.6,107.9,0.099,0.619,1.065,53.398,6882.92
 3,412.3,64.6,0.086,0.53,1.375,6.85,882.91
